@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Asyaaa!</title>
+
+<style>
+/* ===== GENERAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ffb6d5, #ffd9ec);
+    overflow: hidden;
+    color: #912a50;
+}
+
+/* ===== LANDING ===== */
+#landing {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #ffb6d5ee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+    color: white;
+    padding: 20px;
+}
+
+#landing button {
+    padding: 15px 35px;
+    background: #ff6fa3;
+    border: none;
+    border-radius: 30px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 18px #ff8fbc;
+}
+
+/* ===== PAGE 1 ===== */
+#content {
+    display: none;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 25px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(255, 100, 150, 0.35);
+    animation: fadeIn 1.4s ease;
+}
+
+/* SLIDESHOW */
+.slideshow {
+    width: 260px;
+    height: 260px;
+    margin: 0 auto 15px auto;
+    position: relative;
+}
+
+.slide {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    box-shadow: 0 0 18px #ff8fbc;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* TEXT */
+h1 {
+    font-size: 32px;
+    color: #ff3e7f;
+    margin-top: 10px;
+}
+
+#typing {
+    white-space: pre-line;
+    font-size: 15px;
+    margin-top: 10px;
+    min-height: 120px;
+    color: #a53160;
+}
+
+#surprise {
+    display: none;
+    margin-top: 18px;
+    font-size: 17px;
+    animation: fadeIn 1s ease;
+}
+
+/* BUTTONS */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #ff6fa3;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 0 12px #ff9ec9;
+}
+
+/* PAGE 2 (SURAT) */
+#page2 {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffd2e8, #ffe6f3);
+    top: 0;
+    left: 0;
+    padding: 25px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    animation: fadeIn 0.8s ease;
+}
+
+.surat-box {
+    max-width: 450px;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 40px;
+    box-shadow: 0 10px 35px rgba(255,150,180,0.35);
+    color: #912a50;
+    line-height: 1.55;
+    font-size: 15px;
+}
+
+/* HEARTS */
+.heart {
+    position: fixed;
+    width: 18px;
+    height: 18px;
+    background: pink;
+    transform: rotate(45deg);
+    animation: fall 5s linear infinite;
+    opacity: 0.8;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: pink;
+    border-radius: 50%;
+}
+
+.heart:before { top: -9px; left: 0; }
+.heart:after { left: -9px; top: 0; }
+
+@keyframes fall {
+    0% { transform: translateY(-10vh) rotate(45deg); }
+    100% { transform: translateY(120vh) rotate(45deg); opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- LANDING -->
+<div id="landing">
+    <h1>🌸 Ada Sesuatu Untuk Asya 🌸</h1>
+    <button onclick="start()">Buka</button>
+</div>
+
+<!-- PAGE 1 -->
+<div id="content">
+    <div class="card">
+
+        <!-- SLIDESHOW -->
+        <div class="slideshow">
+            <img src="c:\Users\User\AppData\Local\Temp\Rar$DRa8300.45834\foto1.jpeg" class="slide">
+            <img src="c:\Users\User\AppData\Local\Temp\Rar$DRa8300.49972\foto2.jpeg" class="slide">
+           <img src="c:\Users\User\AppData\Local\Temp\Rar$DRa8300.1122\foto3.jpeg" class="slide">
+        </div>
+
+        <h1>Selamat Ulang Tahun Sayang 🎀</h1>
+
+        <div id="typing"></div>
+
+        <!-- SPOTIFY PLAYER -->
+        <iframe style="border-radius:12px; margin-top:15px;"
+        src="https://open.spotify.com/embed/track/5WOSNVChcadlsCRiqXE45K?utm_source=generator"
+        width="100%" height="152" frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen;"></iframe>
+
+        <button onclick="showSurprise()">💗 Kejutan</button>
+
+        <div id="surprise">
+            Semoga kamu makin cantik, makin lucu,  
+            makin bahagia dan makin sayang sama akuuu 💗✨
+        </div>
+
+        <button onclick="openPage2()">📄 Buka Halaman 2</button>
+    </div>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2">
+    <div class="surat-box">
+        <h2 style="text-align:center; color:#ff3e7f; margin-bottom:15px;">
+            Surat Untuk Fasyaka Bunga Amrina 💌
+        </h2>
+
+        <p>
+        Selamat ulang tahun sayangg.
+        Terima kasih udah hadir dan bikin hidup aku jauh lebih indah.
+        Semoga semua doa baik kamu terkabul,
+        dan aku bisa terus jadi alasan kamu tersenyum setiap hari.
+        </p>
+
+        <p>
+        Semoga kamu makin lucu,
+        makin baik, dan makin sayang sama aku.
+        Kalo enggak... yaaa harus tetep sayangg.
+        </p>
+
+        <p>
+        Di setiap tatapan kamu,  
+        aku merasa disayang tanpa harus diminta.  
+        Di setiap senyum kamu,  
+        aku merasa hidup aku layak diperjuangkan.
+        </p>
+
+        <p>
+        Aku nggak minta banyak dari kamu…  
+        cukup kamu tetap jadi kamu,  
+        perempuan manis yang bikin aku  
+        bangga, bersyukur, dan jatuh cinta setiap hari.
+        </p>
+
+        <p>
+        Maaf kalau aku belum sempurna,  
+        tapi aku janji satu hal:
+        selama aku masih bisa,  
+        aku bakal terus jagain kamu,  
+        nemenin kamu, dan sayang sama kamu  
+        dengan cara yang paling tulus yang aku bisa.
+        </p>
+
+        <p style="text-align:center; font-weight:600; margin-top:25px;">
+            Happy Birthday, Asyaaa.
+            I Love You Moreee.  💗✨
+        </p>
+
+        <button onclick="closePage2()" style="width:100%; margin-top:25px;">
+            Kembali ke Halaman 1
+        </button>
+    </div>
+</div>
+
+<script>
+/* START */
+function start() {
+    document.getElementById("landing").style.display = "none";
+    document.getElementById("content").style.display = "flex";
+
+    typeText();
+}
+
+/* TYPING */
+let text = 
+`Yeaayyeaayy sekarang kamu ulang tahun sayangg,
+semangat terus buat kejar semua keingannmu, kamu pasti bisa, jangan pernah takut gagal yaawww.
+
+kamu adalah kebahagiaan aku.
+
+Terima kasih sudah hadir
+dalam hidupku.
+
+Aku sayang kamu. 💗`;
+
+let i = 0;
+function typeText() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeText, 35);
+    }
+}
+
+/* SLIDESHOW */
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 2500);
+
+/* KEJUTAN */
+function showSurprise() {
+    document.getElementById("surprise").style.display = "block";
+}
+
+/* PAGE 2 */
+function openPage2() {
+    document.getElementById("page2").style.display = "block";
+}
+
+function closePage2() {
+    document.getElementById("page2").style.display = "none";
+}
+
+/* HEARTS */
+for (let h = 0; h < 35; h++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+    heart.style.background = `hsl(${Math.random()*60+330},80%,75%)`;
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
